@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ram-Gear Manufacturing – Shop Apps</title>
+<meta name="description" content="Launcher for Ram-Gear Manufacturing Incorporated shop web apps.">
+<meta name="theme-color" content="#1d2b33">
+<link rel="icon" type="image/svg+xml" href="icons/app-hub.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="icons/app-hub-64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/app-hub-192.png">
+<link rel="apple-touch-icon" href="icons/app-hub-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RG Shop Apps">
+<style>
+  :root {
+    --bg: #e9ecef;
+    --panel: #ffffff;
+    --ink: #1f2a33;
+    --muted: #5d6b77;
+    --line: #cfd6dc;
+    --steel: #1d2b33;       /* header slate */
+    --steel-2: #2b3d47;
+    --teal: #2E7386;        /* matches the app icons */
+    --teal-2: #245E6E;
+    --teal-light: #9FD3E1;
+    --accent: var(--teal);
+    --live: #1e7b3c;
+    --live-bg: #e3f3e8;
+    --soon: #7a5a00;
+    --soon-bg: #fff3cc;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.45;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: linear-gradient(180deg, var(--steel-2), var(--steel));
+    color: #fff;
+    border-bottom: 6px solid var(--accent);
+  }
+  .bar {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo { width: 56px; height: 56px; flex: none; display: block; border-radius: 13px; box-shadow: 0 0 0 1px rgba(159,211,225,.35), 0 2px 6px rgba(0,0,0,.35); }
+  .brand h1 { margin: 0; font-size: 1.7rem; letter-spacing: .02em; font-weight: 700; }
+  .brand p {
+    margin: 2px 0 0;
+    color: var(--teal-light);
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    font-size: .85rem;
+    font-weight: 600;
+  }
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 36px;
+  }
+  .intro { margin: 0 0 20px; color: var(--muted); font-size: .98rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    position: relative;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--steel-2);
+    border-radius: 6px;
+    padding: 18px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 170px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .card.live { border-top-color: var(--accent); }
+  .card.live:hover, .card.live:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(31,42,51,.15);
+    border-color: #b9c3cb;
+    border-top-color: var(--accent);
+  }
+  .card.soon { background: #f6f7f8; border-top-color: #a9b3bb; }
+  .card.soon h2, .card.soon .desc { color: #6c7780; }
+  .head { display: flex; align-items: center; gap: 14px; }
+  .icon { width: 56px; height: 56px; flex: none; display: block; }
+  .card.soon .icon { opacity: .55; filter: grayscale(35%); }
+  .title { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; }
+  .card h2 { margin: 0; font-size: 1.2rem; line-height: 1.25; }
+  .badge {
+    flex: none;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .badge.live { color: var(--live); background: var(--live-bg); border: 1px solid #b7dfc3; }
+  .badge.live::before { content: "\25CF  "; }
+  .badge.soon { color: var(--soon); background: var(--soon-bg); border: 1px solid #ecd58a; }
+  .desc { margin: 10px 0 14px; font-size: .95rem; color: var(--ink); flex: 1; }
+  .foot { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .open {
+    display: inline-block;
+    background: var(--teal);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .92rem;
+    padding: 8px 14px;
+    border-radius: 4px;
+  }
+  .open::after { content: "  \2197"; }
+  /* Make the whole live card clickable */
+  .card.live .open::before { content: ""; position: absolute; inset: 0; border-radius: 6px; }
+  .open:focus-visible { outline: 3px solid var(--teal-light); outline-offset: 2px; }
+  .card.live:hover .open { background: var(--teal-2); }
+  .url { font-size: .78rem; color: var(--muted); word-break: break-all; }
+  .note { font-size: .82rem; color: var(--muted); font-style: italic; }
+  .note a { color: var(--muted); }
+  footer {
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .82rem;
+    text-align: center;
+    padding: 14px 20px 18px;
+  }
+  @media (max-width: 520px) {
+    .bar { padding: 16px; gap: 12px; }
+    .logo { width: 44px; height: 44px; border-radius: 10px; }
+    .brand h1 { font-size: 1.3rem; }
+    .brand p { font-size: .75rem; }
+    main { padding: 18px 14px 28px; }
+    .grid { grid-template-columns: 1fr; gap: 14px; }
+    .card { min-height: 0; }
+    .open { padding: 10px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <img class="logo" src="icons/app-hub.svg" width="56" height="56" alt="">
+    <div class="brand">
+      <h1>Ram-Gear Manufacturing</h1>
+      <p>Shop Apps</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="intro">Pick an app below. Live apps open in a new tab.</p>
+  <ul class="grid" id="apps"></ul>
+  <noscript><p>JavaScript is needed to show the app list.</p></noscript>
+</main>
+
+<footer>Ram-Gear Manufacturing Incorporated &middot; Alice, TX</footer>
+
+<script>
+/* =====================================================================
+   APP LIST: add, remove, or edit apps here (one line per app).
+   status: "live"  -> clickable card, opens url in a new tab
+           "soon"  -> muted "Coming soon" card, not clickable
+   icon: relative path to the tile icon (Art's set lives in icons/)
+   note (optional): small muted text; noteUrl (optional) makes it a link
+   ===================================================================== */
+const APPS = [
+  { name: "QC Form",        status: "live", icon: "icons/qc-form.svg", url: "https://ram-gear.github.io/ramgear-app/", desc: "Gearbox assembly verification and teardown evaluation forms. Works offline; syncs when connected." },
+  { name: "Web Gear Calc",  status: "live", icon: "icons/web-gear-calc.svg", url: "https://ram-gear.github.io/wgc/",         desc: "Gear design and calculation suite, a web rebuild of the legacy GCP3 DOS programs." },
+  { name: "RG Worm MOW",    status: "live", icon: "icons/rg-worm-mow.svg", url: "https://ram-gear.github.io/rg-worm-mow/", desc: "Worm thread measurement over wires, with pre‑plate dimensions and a printable report." },
+  { name: "Card File",      status: "soon", icon: "icons/cardfile.svg", desc: "Shop card-file records, moving to a web app. Not published yet.", note: "Private GitHub repo (sign-in required)", noteUrl: "https://github.com/Ram-Gear/cardfile" },
+  { name: "Change Gear",    status: "soon", icon: "icons/change-gear.svg", desc: "Change-gear calculator for hobbing machines. Still being built." },
+];
+/* ===================================================================== */
+
+(function render() {
+  const list = document.getElementById("apps");
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  list.innerHTML = APPS.map(a => {
+    const live = a.status === "live";
+    const badge = live ? '<span class="badge live">Live</span>' : '<span class="badge soon">Coming soon</span>';
+    let foot = "";
+    if (live) {
+      foot = '<a class="open" href="' + esc(a.url) + '" target="_blank" rel="noopener">Open ' + esc(a.name) + '</a>' +
+             '<span class="url">' + esc(a.url.replace(/^https?:\/\//, "").replace(/\/$/, "")) + '</span>';
+    } else if (a.note) {
+      foot = '<span class="note">' + (a.noteUrl
+        ? '<a href="' + esc(a.noteUrl) + '" target="_blank" rel="noopener">' + esc(a.note) + '</a>'
+        : esc(a.note)) + '</span>';
+    }
+    return '<li class="card ' + (live ? "live" : "soon") + '">' +
+             '<div class="head">' +
+               (a.icon ? '<img class="icon" src="' + esc(a.icon) + '" width="56" height="56" alt="">' : '') +
+               '<div class="title"><h2>' + esc(a.name) + '</h2>' + badge + '</div>' +
+             '</div>' +
+             '<p class="desc">' + esc(a.desc) + '</p>' +
+             (foot ? '<div class="foot">' + foot + '</div>' : '') +
+           '</li>';
+  }).join("");
+})();
+
+/* Offline support when served over http(s) (e.g. GitHub Pages). Skipped when opened from disk (file://). */
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.protocol === "http:")) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function (e) { console.warn("Service worker not registered:", e); });
+  });
+}
+</script>
+</body>
+</html>

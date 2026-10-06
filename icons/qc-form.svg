@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>QC Form</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7386"/>
+      <stop offset="1" stop-color="#245E6E"/>
+    </linearGradient>
+  </defs>
+  <!-- tile: identical on every icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- clipboard -->
+  <rect x="124" y="122" width="236" height="306" rx="30" fill="#FFFFFF"/>
+  <rect x="184" y="94" width="116" height="62" rx="20" fill="#9FD3E1" stroke="url(#bg)" stroke-width="14" paint-order="stroke"/>
+  <circle cx="242" cy="112" r="11" fill="url(#bg)"/>
+  <!-- check rows -->
+  <path d="M158 206l22 22 40-44" fill="none" stroke="url(#bg)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="240" y="195" width="88" height="22" rx="11" fill="url(#bg)"/>
+  <path d="M158 284l22 22 40-44" fill="none" stroke="url(#bg)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="240" y="273" width="88" height="22" rx="11" fill="url(#bg)"/>
+  <rect x="158" y="351" width="60" height="22" rx="11" fill="url(#bg)"/>
+  <!-- gear badge -->
+  <path d="M347.7 311.7L352.5 282.8A87.8 87.8 0 0 1 371.5 282.8L376.3 311.7A60 60 0 0 1 384.7 314.5L405.6 293.8A87.8 87.8 0 0 1 421 305L407.8 331.3A60 60 0 0 1 413 338.4L442 334A87.8 87.8 0 0 1 447.9 352.1L421.8 365.6A60 60 0 0 1 421.8 374.4L447.9 387.9A87.8 87.8 0 0 1 442 406L413 401.6A60 60 0 0 1 407.8 408.7L421 435A87.8 87.8 0 0 1 405.6 446.2L384.7 425.5A60 60 0 0 1 376.3 428.3L371.5 457.2A87.8 87.8 0 0 1 352.5 457.2L347.7 428.3A60 60 0 0 1 339.3 425.5L318.4 446.2A87.8 87.8 0 0 1 303 435L316.2 408.7A60 60 0 0 1 311 401.6L282 406A87.8 87.8 0 0 1 276.1 387.9L302.2 374.4A60 60 0 0 1 302.2 365.6L276.1 352.1A87.8 87.8 0 0 1 282 334L311 338.4A60 60 0 0 1 316.2 331.3L303 305A87.8 87.8 0 0 1 318.4 293.8L339.3 314.5A60 60 0 0 1 347.7 311.7ZM386 370A24 24 0 1 1 338 370A24 24 0 1 1 386 370Z" fill="#9FD3E1" fill-rule="evenodd" stroke="url(#bg)" stroke-width="16" paint-order="stroke" stroke-linejoin="round"/>
+</svg>
