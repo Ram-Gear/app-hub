@@ -68,7 +68,7 @@ Open `index.html` and find the `APPS` array near the top of the `<script>` block
 | QC Form | Live | `icons/qc-form.svg` | https://ram-gear.github.io/ramgear-app/ |
 | Web Gear Calc | Live | `icons/web-gear-calc.svg` | https://ram-gear.github.io/wgc/ |
 | RG Worm MOW | Live | `icons/rg-worm-mow.svg` | https://ram-gear.github.io/rg-worm-mow/ |
-| Card File | Coming soon | `icons/cardfile.svg` | private repo, not published |
+| Card File | Live | `icons/cardfile.svg` | https://ram-gear.github.io/cardfile/ |
 | Change Gear | Live | `icons/change-gear.svg` | https://ram-gear.github.io/change-gear/ |
 
 ## Icons
