@@ -69,7 +69,7 @@ Open `index.html` and find the `APPS` array near the top of the `<script>` block
 | Web Gear Calc | Live | `icons/web-gear-calc.svg` | https://ram-gear.github.io/wgc/ |
 | RG Worm MOW | Live | `icons/rg-worm-mow.svg` | https://ram-gear.github.io/rg-worm-mow/ |
 | Card File | Coming soon | `icons/cardfile.svg` | private repo, not published |
-| Change Gear | Coming soon | `icons/change-gear.svg` | in progress |
+| Change Gear | Live | `icons/change-gear.svg` | https://ram-gear.github.io/change-gear/ |
 
 ## Icons
 
