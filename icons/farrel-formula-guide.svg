@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Farrel Formula Guide</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7386"/>
+      <stop offset="1" stop-color="#245E6E"/>
+    </linearGradient>
+  </defs>
+  <!-- tile: identical on every icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="8"/>
+<path d="M256 150 C206 118 140 112 76 124 L76 404 C140 392 206 398 256 430 C306 398 372 392 436 404 L436 124 C372 112 306 118 256 150 Z" fill="#FFFFFF"/>
+<line x1="256" y1="160" x2="256" y2="414" stroke="url(#bg)" stroke-width="10"/>
+<path d="M212.6 248.6L235.8 252.4A70.2 70.2 0 0 1 235.8 267.6L212.6 271.4A48 48 0 0 1 210.4 278.2L226.9 294.9A70.2 70.2 0 0 1 218 307.2L197 296.6A48 48 0 0 1 191.3 300.8L194.8 324A70.2 70.2 0 0 1 180.3 328.7L169.5 307.9A48 48 0 0 1 162.5 307.9L151.7 328.7A70.2 70.2 0 0 1 137.2 324L140.7 300.8A48 48 0 0 1 135 296.6L114 307.2A70.2 70.2 0 0 1 105.1 294.9L121.6 278.2A48 48 0 0 1 119.4 271.4L96.2 267.6A70.2 70.2 0 0 1 96.2 252.4L119.4 248.6A48 48 0 0 1 121.6 241.8L105.1 225.1A70.2 70.2 0 0 1 114 212.8L135 223.4A48 48 0 0 1 140.7 219.2L137.2 196A70.2 70.2 0 0 1 151.7 191.3L162.5 212.1A48 48 0 0 1 169.5 212.1L180.3 191.3A70.2 70.2 0 0 1 194.8 196L191.3 219.2A48 48 0 0 1 197 223.4L218 212.8A70.2 70.2 0 0 1 226.9 225.1L210.4 241.8A48 48 0 0 1 212.6 248.6ZM180 260A14 14 0 1 1 152 260A14 14 0 1 1 180 260Z" fill="url(#bg)" fill-rule="evenodd"/>
+<polyline points="338 188 368 218 338 248" fill="none" stroke="url(#bg)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><polyline points="366.5 188 396.5 218 366.5 248" fill="none" stroke="url(#bg)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#9FD3E1" stroke-width="18" stroke-linecap="round"><line x1="300" y1="300" x2="400" y2="300"/><line x1="300" y1="340" x2="400" y2="340"/></g>
+<path d="M76 404 C140 392 206 398 256 430 C306 398 372 392 436 404 L436 432 C372 420 306 426 256 458 C206 426 140 420 76 432 Z" fill="#9FD3E1"/>
+</svg>
