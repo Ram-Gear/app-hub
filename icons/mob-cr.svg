@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>MOB CR</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7386"/>
+      <stop offset="1" stop-color="#245E6E"/>
+    </linearGradient>
+  </defs>
+  <!-- tile: identical on every icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<path d="M354.9 251.7L397.3 247.7A150.7 150.7 0 0 1 404.6 274.6L365.7 292.4A110 110 0 0 1 365.7 307.6L404.6 325.4A150.7 150.7 0 0 1 397.3 352.3L354.9 348.3A110 110 0 0 1 347.2 361.5L372 396.2A150.7 150.7 0 0 1 352.2 416L317.5 391.2A110 110 0 0 1 304.3 398.9L308.3 441.3A150.7 150.7 0 0 1 281.4 448.6L263.6 409.7A110 110 0 0 1 248.4 409.7L230.6 448.6A150.7 150.7 0 0 1 203.7 441.3L207.7 398.9A110 110 0 0 1 194.5 391.2L159.8 416A150.7 150.7 0 0 1 140 396.2L164.8 361.5A110 110 0 0 1 157.1 348.3L114.7 352.3A150.7 150.7 0 0 1 107.4 325.4L146.3 307.6A110 110 0 0 1 146.3 292.4L107.4 274.6A150.7 150.7 0 0 1 114.7 247.7L157.1 251.7A110 110 0 0 1 164.8 238.5L140 203.8A150.7 150.7 0 0 1 159.8 184L194.5 208.8A110 110 0 0 1 207.7 201.1L203.7 158.7A150.7 150.7 0 0 1 230.6 151.4L248.4 190.3A110 110 0 0 1 263.6 190.3L281.4 151.4A150.7 150.7 0 0 1 308.3 158.7L304.3 201.1A110 110 0 0 1 317.5 208.8L352.2 184A150.7 150.7 0 0 1 372 203.8L347.2 238.5A110 110 0 0 1 354.9 251.7Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<polyline points="212 260 252 300 212 340" fill="none" stroke="url(#bg)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="252 260 292 300 252 340" fill="none" stroke="url(#bg)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="126" cy="300" r="34" fill="#9FD3E1" stroke="url(#bg)" stroke-width="8"/>
+<circle cx="386" cy="300" r="34" fill="#9FD3E1" stroke="url(#bg)" stroke-width="8"/>
+<g stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"><line x1="92" y1="78" x2="92" y2="252"/><line x1="420" y1="78" x2="420" y2="252"/><line x1="132" y1="104" x2="380" y2="104"/></g>
+<path d="M98 104L136 82L136 126Z M414 104L376 82L376 126Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+</svg>
