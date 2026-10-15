@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Span CR</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7386"/>
+      <stop offset="1" stop-color="#245E6E"/>
+    </linearGradient>
+  </defs>
+  <!-- tile: identical on every icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<path d="M100 420L100 236L111.232 236L117.47200000000001 202L144.928 202L151.168 236L162.4 236L173.632 236L179.872 202L207.328 202L213.568 236L224.8 236L236.032 236L242.27200000000002 202L269.728 202L275.968 236L287.2 236L298.432 236L304.67199999999997 202L332.128 202L338.368 236L349.59999999999997 236L360.832 236L367.072 202L394.528 202L400.76800000000003 236L412.0 236L412 420Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round"/>
+<polyline points="111.19999999999999 254 151.2 328.0 111.19999999999999 402" fill="none" stroke="url(#bg)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="173.6 254 213.6 328.0 173.6 402" fill="none" stroke="url(#bg)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="236.0 254 276.0 328.0 236.0 402" fill="none" stroke="url(#bg)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="298.4 254 338.4 328.0 298.4 402" fill="none" stroke="url(#bg)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="360.8 254 400.8 328.0 360.8 402" fill="none" stroke="url(#bg)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+<g stroke="#9FD3E1" stroke-width="16" stroke-linecap="round" fill="none"><line x1="117.47200000000001" y1="88" x2="117.47200000000001" y2="190"/><line x1="269.728" y1="88" x2="269.728" y2="190"/><line x1="147.472" y1="118" x2="239.728" y2="118"/></g>
+<path d="M123.47200000000001 118L161.472 94L161.472 142Z M263.728 118L225.728 94L225.728 142Z" fill="#9FD3E1" stroke="#9FD3E1" stroke-width="6" stroke-linejoin="round"/>
+</svg>
