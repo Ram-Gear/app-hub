@@ -62,6 +62,8 @@ Open `index.html` and find the `APPS` array near the top of the `<script>` block
 - `status: "live"`: clickable card that opens `url` in a new tab, with a green **Live** badge.
 - `status: "soon"`: muted, non-clickable card with a yellow **Coming soon** badge (no `url` needed).
 - `icon`: relative path to the tile icon (shown at 56 px; muted on Coming soon tiles). Leave it out for no icon.
+- `RC_BLAKE_APPS` (right below `APPS`) is the same kind of list for Roger Blake's apps, shown in the **RC Blake apps**
+  popup on the hub. Same fields; to launch one, change `status` to `"live"` and add its `url`.
 - Optional `note` / `noteUrl`: small muted text (or link) under the description.
 
 ## Current apps

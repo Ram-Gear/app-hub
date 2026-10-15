@@ -160,6 +160,22 @@
     .card { min-height: 0; }
     .open { padding: 10px 16px; }
   }
+  .toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 16px; margin: 0 0 20px; }
+  .toolbar .intro { margin: 0; }
+  .rcb-btn { font: inherit; font-weight: 600; font-size: .92rem; color: var(--teal-2); background: #fff; border: 1px solid var(--teal); border-radius: 4px; padding: 8px 14px; cursor: pointer; }
+  .rcb-btn:hover { background: var(--teal); color: #fff; }
+  .rcb-btn:focus-visible, .rcb-x:focus-visible { outline: 3px solid var(--teal-light); outline-offset: 2px; }
+  dialog.rcb { padding: 0; border: 0; background: transparent; width: min(640px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 24px); }
+  dialog.rcb::backdrop { background: rgba(29,43,51,.6); }
+  .rcb-panel { background: var(--panel); border-top: 5px solid var(--teal); border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,.35); display: flex; flex-direction: column; max-height: calc(100dvh - 24px); }
+  .rcb-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px 0; }
+  .rcb-head h2 { margin: 0; font-size: 1.3rem; }
+  .rcb-x { flex: none; width: 40px; height: 40px; font-size: 1.6rem; line-height: 1; color: var(--ink); background: #f1f4f6; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+  .rcb-x:hover { background: #e2e8ec; }
+  .rcb-sub { margin: 4px 18px 12px; color: var(--muted); font-size: .9rem; }
+  .rcb-list { list-style: none; margin: 0; padding: 0 18px 18px; overflow-y: auto; display: grid; gap: 12px; }
+  .rcb-list .card { min-height: 0; }
+  @media (max-width: 520px) { .toolbar { margin-bottom: 14px; } .rcb-btn { width: 100%; padding: 10px 14px; } .rcb-head { padding: 14px 14px 0; } .rcb-sub { margin: 4px 14px 10px; } .rcb-list { padding: 0 14px 14px; } }
   .help { margin-left: auto; flex: none; color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--teal-light); background: rgba(159,211,225,.08); }
   .help:hover, .help:focus-visible { background: var(--accent); }
 </style>
@@ -178,10 +194,24 @@
 </header>
 
 <main>
-  <p class="intro">Pick an app below. Live apps open in a new tab.</p>
+  <div class="toolbar">
+    <p class="intro">Pick an app below. Live apps open in a new tab.</p>
+    <button type="button" class="rcb-btn" id="rcb-open" aria-haspopup="dialog" aria-controls="rcb-dialog">RC Blake apps</button>
+  </div>
   <ul class="grid" id="apps"></ul>
   <noscript><p>JavaScript is needed to show the app list.</p></noscript>
 </main>
+
+<dialog id="rcb-dialog" class="rcb" aria-modal="true" aria-labelledby="rcb-title">
+  <div class="rcb-panel">
+    <div class="rcb-head">
+      <h2 id="rcb-title">RC Blake apps</h2>
+      <button type="button" class="rcb-x" id="rcb-close" aria-label="Close">&times;</button>
+    </div>
+    <p class="rcb-sub">Apps by Roger Blake. Live apps open in a new tab.</p>
+    <ul class="rcb-list" id="rcb-apps"></ul>
+  </div>
+</dialog>
 
 <footer>Ram-Gear Manufacturing Incorporated &middot; Alice, TX &middot; <a href="help.html">Help page</a></footer>
 
@@ -200,12 +230,18 @@ const APPS = [
   { name: "Card File",      status: "live", url: "https://ram-gear.github.io/cardfile/", icon: "icons/cardfile.svg", desc: "Ram-Gear customer card file. Sign in with your QC account." },
   { name: "Change Gear",    status: "live", url: "https://ram-gear.github.io/change-gear/", icon: "icons/change-gear.svg", desc: "Hobbing machine change gears: index, feed, differential, hob RPM and cutting time, with per-machine gear inventories." },
 ];
+
+/* RC BLAKE APPS: Roger Blake's apps, shown in the "RC Blake apps" popup. Same fields as APPS.
+   To launch one, set status: "live" and add url: "https://..." (one-line edit). */
+const RC_BLAKE_APPS = [
+  { name: "Span CR",       status: "soon", desc: "Converts chordal addendum and chordal thickness to span and CR (Ram-Gear's Excel tool rebuilt as a web app)." },
+  { name: "Durability HP", status: "soon", desc: "Durability horsepower rating per AGMA 211.02A (Aug 1966)." },
+];
 /* ===================================================================== */
 
 (function render() {
-  const list = document.getElementById("apps");
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  list.innerHTML = APPS.map(a => {
+  const card = a => {
     const live = a.status === "live";
     const badge = live ? '<span class="badge live">Live</span>' : '<span class="badge soon">Coming soon</span>';
     let foot = "";
@@ -225,7 +261,18 @@ const APPS = [
              '<p class="desc">' + esc(a.desc) + '</p>' +
              (foot ? '<div class="foot">' + foot + '</div>' : '') +
            '</li>';
-  }).join("");
+  };
+  document.getElementById("apps").innerHTML = APPS.map(card).join("");
+  document.getElementById("rcb-apps").innerHTML = RC_BLAKE_APPS.map(card).join("");
+})();
+
+/* RC Blake apps popup: closes with X, Esc (native dialog) or a backdrop click; focus returns to the button. */
+(function rcb() {
+  const btn = document.getElementById("rcb-open"), dlg = document.getElementById("rcb-dialog");
+  btn.addEventListener("click", () => { dlg.showModal(); document.getElementById("rcb-close").focus(); });
+  document.getElementById("rcb-close").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener("close", () => btn.focus());
 })();
 
 /* Offline support when served over http(s) (e.g. GitHub Pages). Skipped when opened from disk (file://). */
