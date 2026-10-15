@@ -4,7 +4,7 @@
    - Other shell files (manifest, icons): stale-while-revalidate.
    - Anything cross-origin or outside this folder (the apps themselves) is NOT intercepted.
    Bump VERSION when the list of shell files changes. */
-const VERSION = "rg-hub-v11";
+const VERSION = "rg-hub-v12";
 const SHELL = [
   "./",
   "./index.html",

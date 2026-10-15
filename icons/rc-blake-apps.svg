@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <title>RC Blake apps v4</title>
+  <title>RC Blake apps v5</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#2E7386"/>
@@ -18,13 +18,14 @@
 <circle cx="444" cy="156" r="9" fill="url(#bg)"/>
 <circle cx="292" cy="344" r="9" fill="url(#bg)"/>
 <circle cx="444" cy="344" r="9" fill="url(#bg)"/>
-<path d="M-20 540 Q-10 410 130 404 Q236 408 250 540Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14"/>
+<path d="M-30 540 Q-20 352 130 346 Q244 350 258 540Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14"/>
 <path d="M140 210 Q206 210 214 268 L232 296 Q226 304 212 304 Q210 366 150 370 Q86 366 78 290 Q80 210 140 210Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14" stroke-linejoin="round"/>
-<path d="M70 268 Q66 170 150 168 Q214 170 222 236 L76 254Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14" stroke-linejoin="round"/>
-<path d="M190 222 L268 236 Q276 260 252 262 L196 258Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="12" stroke-linejoin="round"/>
+<path d="M70 252 Q66 150 146 148 Q222 150 222 252Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14" stroke-linejoin="round"/>
+<path d="M140 158 Q172 190 168 240" fill="none" stroke="url(#bg)" stroke-width="12" stroke-linecap="round"/><path d="M118 162 Q148 194 144 240" fill="none" stroke="url(#bg)" stroke-width="12" stroke-linecap="round"/>
+<path d="M44 242 L262 238 Q284 250 266 268 L44 268 Q30 256 44 242Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="12"/>
 <circle cx="182" cy="282" r="11" fill="url(#bg)"/><path d="M178 336 Q196 342 208 332" fill="none" stroke="url(#bg)" stroke-width="10" stroke-linecap="round"/>
-<circle cx="122" cy="292" r="19" fill="url(#bg)"/><circle cx="122" cy="292" r="12" fill="#9FD3E1"/>
-<path d="M122 292 Q108 410 210 418 Q280 420 296 340" fill="none" stroke="#9FD3E1" stroke-width="16" stroke-linecap="round"/>
+<circle cx="122" cy="300" r="19" fill="url(#bg)"/><circle cx="122" cy="300" r="12" fill="#9FD3E1"/>
+<path d="M122 300 Q108 410 210 418 Q280 420 296 340" fill="none" stroke="#9FD3E1" stroke-width="16" stroke-linecap="round"/>
 <circle cx="300" cy="322" r="34" fill="#9FD3E1" stroke="url(#bg)" stroke-width="10"/><circle cx="300" cy="322" r="13" fill="url(#bg)"/>
 </g><rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="8"/>
 </svg>
