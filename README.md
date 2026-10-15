@@ -3,6 +3,9 @@
 One landing page that links to every Ram-Gear Manufacturing Incorporated shop web app.
 
 - `index.html` is the page: inline CSS and JS, no build step, no server, no CDNs or other external resources.
+- `help.html` is a plain help page (what the hub is, each app, how to install). The header **? Help** button and
+  each help section's "Ask Grok about this" link open grok.com with a question that points Grok at
+  https://ram-gear.github.io/app-hub/help.html first. It is linked from the hub footer and cached by `sw.js`.
 - `icons/` holds the app icons. The page loads them by relative path (`icons/<slug>.svg`, plus `icons/app-hub-64.png` / `app-hub-192.png` for the favicon and apple-touch-icon).
 - `screenshot-desktop.png` (1280x800) and `screenshot-mobile.png` (390 wide, full page) are previews only.
 

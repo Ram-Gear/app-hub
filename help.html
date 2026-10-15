@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help – Ram-Gear Shop Apps</title>
+<meta name="description" content="Help for Ram-Gear Shop Apps, the launcher for Ram-Gear Manufacturing's shop web apps.">
+<meta name="theme-color" content="#1d2b33">
+<link rel="icon" type="image/svg+xml" href="icons/app-hub.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="icons/app-hub-64.png">
+<link rel="apple-touch-icon" href="icons/app-hub-192.png">
+<style>
+  :root {
+    --bg: #EAF7EA; --panel: #ffffff; --ink: #1f2a33; --muted: #5d6b77; --line: #cfd6dc;
+    --steel: #1d2b33; --steel-2: #2b3d47; --teal: #2E7386; --teal-2: #245E6E; --teal-light: #9FD3E1;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.5;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  header { background: linear-gradient(180deg, var(--steel-2), var(--steel)); color: #fff; border-bottom: 6px solid var(--teal); }
+  .bar { max-width: 1180px; margin: 0 auto; padding: 22px 20px; display: flex; align-items: center; gap: 16px; }
+  .bar > a.home { display: flex; align-items: center; gap: 16px; color: inherit; text-decoration: none; }
+  .logo { width: 56px; height: 56px; flex: none; display: block; border-radius: 13px; box-shadow: 0 0 0 1px rgba(159,211,225,.35), 0 2px 6px rgba(0,0,0,.35); }
+  .brand h1 { margin: 0; font-size: 1.7rem; letter-spacing: .02em; font-weight: 700; }
+  .brand p { margin: 2px 0 0; color: var(--teal-light); text-transform: uppercase; letter-spacing: .18em; font-size: .85rem; font-weight: 600; }
+  .back-top { margin-left: auto; flex: none; color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--teal-light); background: rgba(159,211,225,.08); }
+  .back-top:hover, .back-top:focus-visible { background: var(--teal); }
+  main { flex: 1; width: 100%; max-width: 860px; margin: 0 auto; padding: 28px 20px 36px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-top: 5px solid var(--teal); border-radius: 6px; padding: 22px 26px 26px; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+  h2 { font-size: 1.35rem; margin: 0 0 8px; }
+  h3 { font-size: 1.1rem; margin: 26px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+  h4 { font-size: 1rem; margin: 16px 0 2px; display: flex; align-items: center; gap: 10px; }
+  h4 img { width: 28px; height: 28px; flex: none; }
+  p, ul, ol { margin: 6px 0; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 3px 0; }
+  a { color: var(--teal-2); }
+  code { background: #f1f4f6; border: 1px solid #e1e6ea; border-radius: 3px; padding: 0 4px; font-size: .92em; word-break: break-all; }
+  .note { background: #f4faf4; border-left: 4px solid var(--teal); padding: 10px 14px; margin: 12px 0 0; border-radius: 0 4px 4px 0; }
+  .ask { margin: 4px 0 0; font-size: .82rem; }
+  .ask a { color: var(--teal); text-decoration: none; border-bottom: 1px dotted var(--teal); }
+  .ask a:hover { color: var(--teal-2); border-bottom-style: solid; }
+  .note + .ask { margin-top: 6px; }
+  .back { display: inline-block; margin-top: 22px; font-weight: 600; }
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; text-align: center; padding: 14px 20px 18px; }
+  @media (max-width: 520px) {
+    .bar { padding: 16px; gap: 12px; }
+    .bar > a.home { gap: 12px; }
+    .logo { width: 44px; height: 44px; border-radius: 10px; }
+    .brand h1 { font-size: 1.3rem; }
+    .brand p { font-size: .75rem; }
+    .back-top { padding: 6px 10px; font-size: .85rem; }
+    main { padding: 18px 12px 28px; }
+    .panel { padding: 18px 16px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="home" href="index.html">
+      <img class="logo" src="icons/app-hub.svg" width="56" height="56" alt="">
+      <div class="brand">
+        <h1>Ram-Gear Manufacturing</h1>
+        <p>Shop Apps &middot; Help</p>
+      </div>
+    </a>
+    <a class="back-top" href="index.html">&larr; Apps</a>
+  </div>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>About the hub</h2>
+    <p>Ram-Gear Shop Apps is a launcher for Ram-Gear Manufacturing's shop web apps. It is one page with a tile for
+      each app; tap or click a tile to open that app in a new tab.</p>
+    <p>Hub address: <a href="https://ram-gear.github.io/app-hub/">https://ram-gear.github.io/app-hub/</a></p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20explain%20what%20the%20Ram-Gear%20Shop%20Apps%20hub%20is%20and%20how%20to%20use%20it%20to%20open%20the%20shop%27s%20apps." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h3>The apps</h3>
+
+    <h4><img src="icons/qc-form.svg" alt="">QC Form</h4>
+    <p>Gearbox assembly verification and teardown evaluation forms. Works offline and syncs when connected.
+      Needs the QC sign-in.<br>
+      <a href="https://ram-gear.github.io/ramgear-app/" target="_blank" rel="noopener">https://ram-gear.github.io/ramgear-app/</a></p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20give%20me%20pointers%20on%20using%20the%20QC%20Form%20app%20%28gearbox%20assembly%20verification%20and%20teardown%20evaluation%20forms%29%2C%20including%20signing%20in%20and%20working%20offline." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h4><img src="icons/web-gear-calc.svg" alt="">Web Gear Calc</h4>
+    <p>Gear design and calculation suite, a web rebuild of the legacy GCP3 DOS programs.<br>
+      <a href="https://ram-gear.github.io/wgc/" target="_blank" rel="noopener">https://ram-gear.github.io/wgc/</a></p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20give%20me%20pointers%20on%20getting%20started%20with%20Web%20Gear%20Calc%2C%20the%20web%20rebuild%20of%20the%20GCP3%20DOS%20gear%20design%20and%20calculation%20programs." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h4><img src="icons/rg-worm-mow.svg" alt="">RG Worm MOW</h4>
+    <p>Worm thread measurement over wires, with pre&#8209;plate dimensions and a printable report.<br>
+      <a href="https://ram-gear.github.io/rg-worm-mow/" target="_blank" rel="noopener">https://ram-gear.github.io/rg-worm-mow/</a></p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20give%20me%20pointers%20on%20using%20RG%20Worm%20MOW%20for%20worm%20thread%20measurement%20over%20wires%2C%20pre-plate%20dimensions%20and%20the%20printable%20report." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h4><img src="icons/cardfile.svg" alt="">Card File</h4>
+    <p>Ram-Gear customer card file. Sign in with your QC account.<br>
+      <a href="https://ram-gear.github.io/cardfile/" target="_blank" rel="noopener">https://ram-gear.github.io/cardfile/</a></p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20give%20me%20pointers%20on%20using%20the%20Card%20File%20app%20%28Ram-Gear%20customer%20card%20file%29%20and%20signing%20in%20with%20my%20QC%20account." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h4><img src="icons/change-gear.svg" alt="">Change Gear</h4>
+    <p>Hobbing machine change gears: index, feed, differential, hob RPM and cutting time, with per-machine gear inventories.<br>
+      <a href="https://ram-gear.github.io/change-gear/" target="_blank" rel="noopener">https://ram-gear.github.io/change-gear/</a></p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20give%20me%20pointers%20on%20using%20the%20Change%20Gear%20app%20for%20hobbing%20machine%20change%20gears%3A%20index%2C%20feed%2C%20differential%2C%20hob%20RPM%20and%20cutting%20time%2C%20and%20per-machine%20gear%20inventories." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <p class="note"><strong>Good to know:</strong> the apps run from the internet, so you need a connection to open them.
+      <strong>QC Form</strong> and <strong>Card File</strong> need your QC sign-in (username and password or PIN).</p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20help%20me%20with%20internet%20connection%20and%20QC%20sign-in%20problems%20when%20opening%20the%20Ram-Gear%20shop%20apps." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h3>Install the hub</h3>
+
+    <h4>Android phone</h4>
+    <ol>
+      <li>Open <a href="https://ram-gear.github.io/app-hub/">https://ram-gear.github.io/app-hub/</a> in <strong>Chrome</strong>.</li>
+      <li>Tap the <strong>&#8942;</strong> menu (top right).</li>
+      <li>Tap <strong>Install app</strong> (or <strong>Add to Home screen</strong>), then confirm.</li>
+    </ol>
+    <p>"RG Shop Apps" appears on your home screen and opens full-screen.</p>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20walk%20me%20through%20installing%20the%20Ram-Gear%20Shop%20Apps%20hub%20on%20my%20Android%20phone%20with%20Chrome." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h4>iPhone</h4>
+    <ol>
+      <li>Open <a href="https://ram-gear.github.io/app-hub/">https://ram-gear.github.io/app-hub/</a> in <strong>Safari</strong>.</li>
+      <li>Tap the <strong>Share</strong> button (square with an arrow).</li>
+      <li>Tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>.</li>
+    </ol>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20walk%20me%20through%20adding%20the%20Ram-Gear%20Shop%20Apps%20hub%20to%20my%20iPhone%20home%20screen%20with%20Safari." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <h4>PC</h4>
+    <ul>
+      <li>In <strong>Chrome</strong> or <strong>Edge</strong>, open <a href="https://ram-gear.github.io/app-hub/">https://ram-gear.github.io/app-hub/</a>
+        and click the <strong>install</strong> icon at the right end of the address bar.</li>
+      <li>Or double-click the local copy:
+        <code>Z:\pricebook\PROGRAMS\Ram-Aps\index.html</code></li>
+    </ul>
+    <p class="ask"><a href="https://grok.com/?q=Please%20read%20the%20Ram-Gear%20Shop%20Apps%20help%20page%20first%3A%20https%3A%2F%2Fram-gear.github.io%2Fapp-hub%2Fhelp.html%20Then%20walk%20me%20through%20installing%20the%20Ram-Gear%20Shop%20Apps%20hub%20on%20my%20Windows%20PC%20with%20Chrome%20or%20Edge%2C%20or%20opening%20the%20local%20copy%20at%20Z%3A%5Cpricebook%5CPROGRAMS%5CRam-Aps%5Cindex.html." target="_blank" rel="noopener">Ask Grok about this &#8599;</a></p>
+
+    <a class="back" href="index.html">&larr; Back to the apps</a>
+  </div>
+</main>
+
+<footer>Ram-Gear Manufacturing Incorporated &middot; Alice, TX</footer>
+</body>
+</html>
