@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>RC Blake apps</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7386"/>
+      <stop offset="1" stop-color="#245E6E"/>
+    </linearGradient>
+  </defs>
+  <!-- tile: identical on every icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="4" y="4" width="504" height="504" rx="108" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="8"/>
+<clipPath id="tc"><rect width="512" height="512" rx="112"/></clipPath><g clip-path="url(#tc)">
+<path d="M408.1 206.4L467.4 216.3A212.3 212.3 0 0 1 467.4 255.7L408.1 265.6A155 155 0 0 1 402.6 286.4L448.9 324.7A212.3 212.3 0 0 1 429.3 358.8L372.9 337.7A155 155 0 0 1 357.7 352.9L378.8 409.3A212.3 212.3 0 0 1 344.7 428.9L306.4 382.6A155 155 0 0 1 285.6 388.1L275.7 447.4A212.3 212.3 0 0 1 236.3 447.4L226.4 388.1A155 155 0 0 1 205.6 382.6L167.3 428.9A212.3 212.3 0 0 1 133.2 409.3L154.3 352.9A155 155 0 0 1 139.1 337.7L82.7 358.8A212.3 212.3 0 0 1 63.1 324.7L109.4 286.4A155 155 0 0 1 103.9 265.6L44.6 255.7A212.3 212.3 0 0 1 44.6 216.3L103.9 206.4A155 155 0 0 1 109.4 185.6L63.1 147.3A212.3 212.3 0 0 1 82.7 113.2L139.1 134.3A155 155 0 0 1 154.3 119.1L133.2 62.7A212.3 212.3 0 0 1 167.3 43.1L205.6 89.4A155 155 0 0 1 226.4 83.9L236.3 24.6A212.3 212.3 0 0 1 275.7 24.6L285.6 83.9A155 155 0 0 1 306.4 89.4L344.7 43.1A212.3 212.3 0 0 1 378.8 62.7L357.7 119.1A155 155 0 0 1 372.9 134.3L429.3 113.2A212.3 212.3 0 0 1 448.9 147.3L402.6 185.6A155 155 0 0 1 408.1 206.4ZM406 236A150 150 0 1 1 106 236A150 150 0 1 1 406 236Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M96 540 Q96 400 256 396 Q416 400 416 540Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14"/>
+<path d="M188.1 323.9 L118.3 315.4 L160.0 258.8 L115.0 204.7 L184.3 192.2 L188.7 122.0 L247.6 160.4Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="10" stroke-linejoin="round"/>
+<path d="M264.4 160.4 L321.5 125.5 L327.7 192.2 L393.2 206.1 L352.0 258.8 L390.1 313.8 L323.9 323.9Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="10" stroke-linejoin="round"/>
+<ellipse cx="256" cy="266" rx="80" ry="94" fill="#FFFFFF" stroke="url(#bg)" stroke-width="14"/>
+<circle cx="224" cy="248" r="13" fill="url(#bg)"/><circle cx="288" cy="248" r="13" fill="url(#bg)"/>
+<path d="M204 226 Q222 212 242 222 M272 214 Q292 198 310 210" stroke="url(#bg)" stroke-width="12" stroke-linecap="round"/>
+<path d="M256 292 Q226 278 196 300 Q186 318 168 314 Q196 340 256 312 Q316 340 344 314 Q326 318 316 300 Q286 278 256 292Z" fill="#FFFFFF" stroke="url(#bg)" stroke-width="10" stroke-linejoin="round"/>
+<path d="M206 380 Q190 460 236 470 M306 380 Q322 460 276 470 M256 470 L256 470" fill="none" stroke="#9FD3E1" stroke-width="16" stroke-linecap="round"/>
+<path d="M236 470 Q256 476 276 470" fill="none" stroke="#9FD3E1" stroke-width="16"/><circle cx="352" cy="462" r="0"/>
+<path d="M296 466 Q330 470 336 440" fill="none" stroke="#9FD3E1" stroke-width="14" stroke-linecap="round"/><circle cx="338" cy="428" r="22" fill="#9FD3E1"/>
+<path d="M400 520 Q430 330 352 190" fill="none" stroke="url(#bg)" stroke-width="66" stroke-linecap="round"/><path d="M400 520 Q430 330 352 190" fill="none" stroke="#FFFFFF" stroke-width="42" stroke-linecap="round"/>
+<circle cx="346" cy="176" r="40" fill="#FFFFFF" stroke="url(#bg)" stroke-width="12"/>
+</g>
+</svg>

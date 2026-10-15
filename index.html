@@ -162,9 +162,9 @@
   }
   .toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 16px; margin: 0 0 20px; }
   .toolbar .intro { margin: 0; }
-  .rcb-btn { font: inherit; font-weight: 600; font-size: .92rem; color: var(--teal-2); background: #fff; border: 1px solid var(--teal); border-radius: 4px; padding: 8px 14px; cursor: pointer; }
-  .rcb-btn:hover { background: var(--teal); color: #fff; }
-  .rcb-btn:focus-visible, .rcb-x:focus-visible { outline: 3px solid var(--teal-light); outline-offset: 2px; }
+  button.open { font: inherit; font-weight: 600; font-size: .92rem; border: 0; cursor: pointer; line-height: inherit; text-align: left; }
+  .card.live button.open::after { content: none; }
+  .rcb-x:focus-visible { outline: 3px solid var(--teal-light); outline-offset: 2px; }
   dialog.rcb { padding: 0; border: 0; background: transparent; width: min(640px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 24px); }
   dialog.rcb::backdrop { background: rgba(29,43,51,.6); }
   .rcb-panel { background: var(--panel); border-top: 5px solid var(--teal); border-radius: 6px; box-shadow: 0 12px 40px rgba(0,0,0,.35); display: flex; flex-direction: column; max-height: calc(100dvh - 24px); }
@@ -176,7 +176,7 @@
   .rcb-list { list-style: none; margin: 0; padding: 0 18px 18px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; min-height: 0; }
   .rcb-list > * { flex-shrink: 0; }
   .rcb-list .card { min-height: 0; }
-  @media (max-width: 520px) { .toolbar { margin-bottom: 14px; } .rcb-btn { width: 100%; padding: 10px 14px; } .rcb-head { padding: 14px 14px 0; } .rcb-sub { margin: 4px 14px 10px; } .rcb-list { padding: 0 14px 14px; } }
+  @media (max-width: 520px) { .toolbar { margin-bottom: 14px; } .rcb-head { padding: 14px 14px 0; } .rcb-sub { margin: 4px 14px 10px; } .rcb-list { padding: 0 14px 14px; } }
   .help { margin-left: auto; flex: none; color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--teal-light); background: rgba(159,211,225,.08); }
   .help:hover, .help:focus-visible { background: var(--accent); }
 </style>
@@ -197,7 +197,6 @@
 <main>
   <div class="toolbar">
     <p class="intro">Pick an app below. Live apps open in a new tab.</p>
-    <button type="button" class="rcb-btn" id="rcb-open" aria-haspopup="dialog" aria-controls="rcb-dialog">RC Blake apps</button>
   </div>
   <ul class="grid" id="apps"></ul>
   <noscript><p>JavaScript is needed to show the app list.</p></noscript>
@@ -270,6 +269,21 @@ const RC_BLAKE_APPS = [
   };
   document.getElementById("apps").innerHTML = APPS.map(card).join("");
   document.getElementById("rcb-apps").innerHTML = RC_BLAKE_APPS.map(card).join("");
+
+  /* RC Blake apps tile: looks like a live app card, but its button opens the popup instead of a new tab. */
+  const rcbLive = RC_BLAKE_APPS.filter(a => a.status === "live").length;
+  document.getElementById("apps").insertAdjacentHTML("beforeend",
+    '<li class="card live rcb-tile">' +
+      '<div class="head">' +
+        '<img class="icon" src="icons/rc-blake-apps.svg" width="56" height="56" alt="" onerror="this.style.display=\'none\'">' +
+        '<div class="title"><h2>RC Blake apps</h2><span class="badge live">Live</span></div>' +
+      '</div>' +
+      '<p class="desc">Roger Blake\'s gear calculation apps. ' + rcbLive + ' of ' + RC_BLAKE_APPS.length + ' live.</p>' +
+      '<div class="foot">' +
+        '<button type="button" class="open" id="rcb-open" aria-haspopup="dialog" aria-controls="rcb-dialog">Open RC Blake apps</button>' +
+        '<span class="url">Opens a list of ' + RC_BLAKE_APPS.length + ' apps</span>' +
+      '</div>' +
+    '</li>');
 })();
 
 /* RC Blake apps popup: closes with X, Esc (native dialog) or a backdrop click; focus returns to the button. */
