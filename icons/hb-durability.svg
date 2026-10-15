@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Durability HP</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7386"/>
+      <stop offset="1" stop-color="#245E6E"/>
+    </linearGradient>
+  </defs>
+  <!-- tile: identical on every icon -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+<path d="M373.8 213.1L419.7 220.8A164.4 164.4 0 0 1 419.7 251.2L373.8 258.9A120 120 0 0 1 369.5 275L405.4 304.7A164.4 164.4 0 0 1 390.1 331L346.5 314.8A120 120 0 0 1 334.8 326.5L351 370.1A164.4 164.4 0 0 1 324.7 385.4L295 349.5A120 120 0 0 1 278.9 353.8L271.2 399.7A164.4 164.4 0 0 1 240.8 399.7L233.1 353.8A120 120 0 0 1 217 349.5L187.3 385.4A164.4 164.4 0 0 1 161 370.1L177.2 326.5A120 120 0 0 1 165.5 314.8L121.9 331A164.4 164.4 0 0 1 106.6 304.7L142.5 275A120 120 0 0 1 138.2 258.9L92.3 251.2A164.4 164.4 0 0 1 92.3 220.8L138.2 213.1A120 120 0 0 1 142.5 197L106.6 167.3A164.4 164.4 0 0 1 121.9 141L165.5 157.2A120 120 0 0 1 177.2 145.5L161 101.9A164.4 164.4 0 0 1 187.3 86.6L217 122.5A120 120 0 0 1 233.1 118.2L240.8 72.3A164.4 164.4 0 0 1 271.2 72.3L278.9 118.2A120 120 0 0 1 295 122.5L324.7 86.6A164.4 164.4 0 0 1 351 101.9L334.8 145.5A120 120 0 0 1 346.5 157.2L390.1 141A164.4 164.4 0 0 1 405.4 167.3L369.5 197A120 120 0 0 1 373.8 213.1ZM334 236A78 78 0 1 1 178 236A78 78 0 1 1 334 236Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M272 172L216 248L252 248L236 306L298 224L262 224Z" fill="#9FD3E1" stroke="#9FD3E1" stroke-width="10" stroke-linejoin="round"/>
+<polyline points="150 404 188 440 150 476" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="226 404 264 440 226 476" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="302 404 340 440 302 476" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
